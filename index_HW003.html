@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer</title>
+    <link rel="stylesheet" href="styles/main_HW003.css">
+</head>
+<body>
+
+
+    <script>
+        function generateFooter(contacts, title, bgcolor, fontcolor) {
+            document.write(
+                `<footer>
+                    <div class="container" style="background-color: ${bgcolor}; color: ${fontcolor};">
+                        <div class="contacts">
+                            <p>${workingWithContacts(contacts)}</p>
+                        </div>
+                        <div class="site-name">
+                            <p>${title} &copy; 2000 г.</p>
+                        </div>
+                    </div>
+                </footer>`);
+        }
+
+        function workingWithContacts(contacts) {
+            let cont = '';
+            for (let i in contacts) {
+                cont += contacts[i] + '<br>';
+            }
+            return cont;
+        }
+
+        generateFooter(['Номер телефона: +7(343)275-55-55', 'Email: cacoyToEmail@yandex.ru', 'Адрес: г. Екатеринбург ул. Малышева д. 10 офис 10'], 
+        'SuperSiteEverrrrr', '#1E1C1C', '#FFFFFF');
+    </script>
+</body>
+</html>
